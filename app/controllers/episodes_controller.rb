@@ -16,7 +16,7 @@ class EpisodesController < ApplicationController
     else
       render #TODO
     end
-    end
+  end
 
     def edit
       @episode = Episode.find(params[:id])
@@ -36,5 +36,11 @@ class EpisodesController < ApplicationController
       @episode = Episode.find(params[:id])
       @episode.destroy
     end
+
+  private
+
+  def episode_params
+  params.require(:episode).permit(:season, :title, :show, :producer, :characters)
+  end
 
 end

@@ -31,4 +31,10 @@ class CharactersController < ApplicationController
     end
   end
 
+
+private
+
+def character_params
+  params.require(:character).permit(:archetype, :catchphrase, :actor, :show)
+end
 end

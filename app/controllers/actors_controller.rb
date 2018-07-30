@@ -14,4 +14,10 @@ class ActorsController < ApplicationController
     end
   end
 
+  private
+
+  def actor_params
+    params.require(:actor).permit(:name, :a_list, :characters, :shows, :producers, :episodes)
+  end
+
 end
