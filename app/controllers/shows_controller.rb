@@ -5,13 +5,21 @@ class ShowsController < ApplicationController
 
   def new
     @show = Show.new
+    @show.influencing_relationships.build()
+    @show.influencing_relationships.build()
   end
 
   def create
-    @show = Show.new(show_params)
+    @show = Show.new(title: params[:show][:title], description: params[:show][:description], producer: TODO)
+    @influence_one = Show.find(params[:show][:influenced])
+    @influence_two = Show.find(params[:show][:influences])
+    @show.influences << @influence_one
 
+    if @influence_one != @influence_two
+      @show.influences << @influence_two
+    end
     if @show.save
-      redirect_to #TODO
+      redirect_to "/shows/#{@show.id}/edit"
     else
       render #TODO
     end
@@ -43,7 +51,7 @@ class ShowsController < ApplicationController
 private
 
 def show_params
-  params.require(:show).permit(:title, :description, :producer, actors:[])
+  params.require(:show).permit(:title, :description, influences:[], actors:[])
 end
 
 

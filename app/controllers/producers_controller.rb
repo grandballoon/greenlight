@@ -17,6 +17,15 @@ class ProducersController < ApplicationController
     @producer.destroy
   end
 
+  def welcome
+    render :"welcome"
+  end
+
+  def signup
+    render :"signup"
+  end
+
+
   private
 
   def producer_params

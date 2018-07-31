@@ -1,8 +1,8 @@
 class Actor < ApplicationRecord
-  has_many :characters
-  has_many :shows, through: :characters
+  has_many :appearances
+  has_many :shows, through: :appearances
   has_many :producers, through: :shows
-  has_many :episodes, through: :characters
+  
 
 
   def costars

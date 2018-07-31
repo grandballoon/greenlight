@@ -1,0 +1,2 @@
+class TropesController < ApplicationController
+end
