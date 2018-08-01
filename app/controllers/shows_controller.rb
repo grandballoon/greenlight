@@ -10,18 +10,19 @@ class ShowsController < ApplicationController
   end
 
   def create
-    @show = Show.new(title: params[:show][:title], description: params[:show][:description], producer: TODO)
+    @show = Show.new(title: params[:show][:title], genre_id: params[:show][:genre_id], producer: current_producer)
     @influence_one = Show.find(params[:show][:influenced])
     @influence_two = Show.find(params[:show][:influences])
     @show.influences << @influence_one
-
     if @influence_one != @influence_two
       @show.influences << @influence_two
     end
+    byebug
     if @show.save
       redirect_to "/shows/#{@show.id}/edit"
     else
-      render #TODO
+      flash[:notice] = "I'm not seeing the whole picture, doll."
+      render :new
     end
   end
 
@@ -51,7 +52,7 @@ class ShowsController < ApplicationController
 private
 
 def show_params
-  params.require(:show).permit(:title, :description, influences:[], actors:[])
+  params.require(:show).permit(:title, :genre, influences:[], actors:[])
 end
 
 

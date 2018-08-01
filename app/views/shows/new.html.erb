@@ -1,11 +1,8 @@
-<h1>NEW SHOW NEW SHOW NEW SHOW</h1>
+<h1>All right. Stay with me here.</h1>
 
 <%= form_for @show do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.collection_select(:genre_id, Genre.all, :id, :name) %>
+<p>You're gonna love this one. Millie Bobby Brown's already onboard. It's called: <%= f.text_field :title %></p> <br>
+  It's a classic <%= f.collection_select(:genre_id, Genre.all, :id, :name) %> story. <br>
   <p>It's like <%= f.collection_select(:influenced, Show.all, :id, :title) %> meets <%= f.collection_select(:influences, Show.all, :id, :title) %></p>
   <%= f.submit %>
 

@@ -1,3 +1,14 @@
 <h1><%= @producer.name %>, baby, sweetheart</h1>
 
+<% if @producer.shows.count > 0 %>
+<p>Kid, you're on fire. You're eating up the slate. Look at all these joints you've got behind you:</p>
+<ul>
+  <% @producer.shows.each do |show| %>
+    <li><% show.title %><br></li>
+  <% end  %>
+</ul>
+<% else  %>
+  <p>Welcome to the City of Angels, kid. Let's get you started. Pitch me something — gimme the next Game of Thrones:</p>
+<% end  %>
+
 <%= button_to "Make a New Show", new_show_path, method: "get"%>
