@@ -1,3 +1,9 @@
+Producer.destroy_all
+Genre.destroy_all
+Trope.destroy_all
+Actor.destroy_all
+Show.destroy_all
+
 #PRODUCERS
 tommy = Producer.create!(name: "Tommy Showbiz")
 sally = Producer.create!(name: "Sally Showbiz")
