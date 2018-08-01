@@ -1,6 +1,13 @@
+#PRODUCERS
 tommy = Producer.create!(name: "Tommy Showbiz")
 sally = Producer.create!(name: "Sally Showbiz")
+jimmy = Producer.create!(name: "Jimmy Showbiz")
+bobby = Producer.create!(name: "Bobby Showbiz")
+suzie = Producer.create!(name: "Suzie Showbiz")
+barb = Producer.create!(name: "Barb Showbiz")
 
+
+#GENRES
 horror = Genre.create!(name: "Horror")
 drama = Genre.create!(name: "Drama")
 fantasy = Genre.create!(name: "Fantasy")
@@ -100,3 +107,25 @@ lets_split_up = Trope.create!(name: "Let's Split Up", description: "The group sp
 evil_clown = Trope.create!(name: "Evil Clown", description: "A clown who is evil", genre: horror)
 murderous_mannequin = Trope.create!(name: "Murderous Mannequin", description: "It's sick of displaying clothes. Now it's out for blood", genre: horror)
 scare_chord = Trope.create!(name: "Scare Chord", description: "The chord that gets played whenever something scary happens", genre: horror)
+
+
+#REALITY TROPES
+back_for_finale = Trope.create!(name: "Back for the Finale", description: "A contestant eliminated in previous rounds comes back for the finale", genre: reality)
+brutal_honesty = Trope.create!(name: "Brutal Honesty", description: "One contestant gives another one a double-dose of hard truths", genre: reality)
+confession_cam = Trope.create!(name: "Confession Cam", description: "Someone says what they really think on the Confession Cam", genre: reality)
+catfight = Trope.create!(name: "Catfight", description: "Two female contestants get into a scrap", genre: reality)
+eliminated = Trope.create!(name: "Elimination Catchphrase", description: "Now sashay away", genre: reality)
+everyone = Trope.create!(name: "Everyone Meets Everyone", description: "Our contestants get to know each other", genre: reality)
+mansion = Trope.create!(name: "Reality TV Mansion", description: "Our contestants live in a mansion", genre: reality)
+shocking_elimination = Trope.create!(name: "Shocking Elimination", description: "Someone you never expected would get the gone is eliminated from the show", genre: reality)
+competition = Trope.create!(name: "This is a Competition", description: "Someone says 'This is a competition'", genre: reality)
+mean_brit = Trope.create!(name: "The Mean Brit", description: "The show has a mean British cast member", genre: reality)
+make_friends = Trope.create!(name: "I'm Not Here to Make Friends", description: "Someone says the phrase 'I'm not here to make friends'", genre: reality)
+celebrity_edition = Trope.create!(name: "Celebrity Edition", description: "It's the same show, but this time, with celebrities", genre: reality)
+
+
+#ACTORS
+robert = Actor.create!(name: "Robert De Niro", a_list: true)
+jack = Actor.create!(name: "Jack Nicholson", a_list: true)
+tom = Actor.create!(name: "Tom Hanks", a_list: true)
+leo = Actor.create!(name: "Leonardo DiCaprio", a_list: true)
