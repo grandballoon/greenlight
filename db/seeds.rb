@@ -29,7 +29,7 @@ mysterious_parent = Trope.create!(name: "Mysterious Parent", description: "A pro
 non_sequitur = Trope.create!(name: "Notable Non Sequitur", description: "Any time a character mentions an unrelated piece of information off the cuff, like 'Sorry I'm late, my car was stolen,' it is guaranteed to become relevant later in the episode", genre: drama)
 operation = Trope.create!(name: "Operation Game of Doom", description: "The hero must remove something from a container VERY carefully", genre: drama)
 off_the_table = Trope.create!(name: "Off The Table", description: "An offer is extended to the hero and subsequently rejected. Later on, the hero attempts to take the deal, but is rebuffed. It is Off The Table", genre: drama)
-just_a_dream: Trope.create!(name: "It Was A Dream the Whole Time", description: "It was a dream the whole time", description: drama)
+just_a_dream = Trope.create!(name: "It Was A Dream the Whole Time", description: "It was a dream the whole time", genre: drama)
 please = Trope.create!(name: "Please, I'll Do Anything!", description: "Someone says the phrase 'Please, I'll do anything!', and is replied to with '... Anything?'", genre: drama)
 punch = Trope.create!(name: "Punch A Wall", description: "Things are going poorly. The hero punches a wall", genre: drama)
 you_suck = Trope.create!(name: "The Reason You Suck Speech", description: "Someone delivers a speech outlining exactly what's wrong with another character", genre: drama)
@@ -67,14 +67,14 @@ vomit_chain_reaction = Trope.create!(name: "Vomit Chain Reaction", description: 
 elven_folk = Trope.create!(name: "Elven Folk", description: "We encounter a race of fair-skinned, elegant, fair folk", genre: fantasy)
 back_from_the_dead = Trope.create!(name: "Back From the Dead", description: "Someone comes back from the dead", genre: fantasy)
 big_bad_wolf = Trope.create!(name: "Big Bad Wolf", description: "A monstrous beast set on eating the protagonist", genre: fantasy)
-curse = Trope.create!(name: "A Curse On You", description: "Someone is the target of an evil hex", genre = fantasy)
+curse = Trope.create!(name: "A Curse On You", description: "Someone is the target of an evil hex", genre: fantasy)
 evil_matriarch = Trope.create!(name: "Evil Matriarch", description: "A dominant female character with evil intentions", genre: fantasy)
 evil_sorcerer = Trope.create!(name: "Evil Sorcerer", description: "A powerful and nefarious magic user", genre: fantasy)
 fairy_god_mother = Trope.create!(name: "Fairy God Mother", description: "A benevolent fairy who appears to benefit a woebegotten character", genre: fantasy)
 forbidden_fruit = Trope.create!(name: "Forbidden Fruit", description: "A fruit that must not be eaten", genre: fantasy)
 damsel_in_distress = Trope.create!(name: "Damsel in Distress", description: "She's fair of skin, she's noble of birth, and she's in deep trouble", genre: fantasy)
 secret_royaly = Trope.create!(name: "Secret Royalty", description: "A character thought to be a lowly commoner is suddenly revealed to secretly be royalty", genre: fantasy)
-happily_ever_after = Trope.create!(name: "Happily Ever After", decription: "After a long and turbulent journey, it all works out in the end", genre: fantasy)
+happily_ever_after = Trope.create!(name: "Happily Ever After", description: "After a long and turbulent journey, it all works out in the end", genre: fantasy)
 true_name = Trope.create!(name: "I Know Your True Name", description: "A character's secret background is hinted at by a wise old witch", genre: fantasy)
 merciful_minion = Trope.create!(name: "Merciful Minion", description: "The main villain's underling is revealed to have a soft spot after all", genre: fantasy)
 noble_fugitive = Trope.create!(name: "Noble Fugitive", description: "A member of the royal family must go on the run and is hunted", genre: fantasy)
@@ -98,7 +98,7 @@ creepy_child = Trope.create!(name: "Creepy Child", description: "They're just a 
 crusty_caretaker = Trope.create!(name: "Crusty Caretaker", description: "A decrepit old groundskeeper is the only person at the crumbling mansion", genre: horror)
 dark_lord = Trope.create!(name: "Dark Lord on Life Support", description: "The villain in charge of all the other villains is an ailing old man hooked up to nefarious machines", genre: horror)
 the_woods = Trope.create!(name: "Don't Go in the Woods", description: "Characters are told that, whatever they don't, they shouldn't go in the woods", genre: horror)
-demonic_doll = Trope.create!(name: "Demonic Doll", description: "It's tiny, it's frilly, and it's filled with demonic energy" genre: horror)
+demonic_doll = Trope.create!(name: "Demonic Doll", description: "It's tiny, it's frilly, and it's filled with demonic energy", genre: horror)
 lab_accident = Trope.create!(name: "Freak Lab Accident", description: "Something in a scientific experiment goes horribly wrong", genre: horror)
 headless_horseman = Trope.create!(name:"Headless Horseman", description: "A decapitated harbinger of doom", genre: horror)
 ghost_hitchhiker = Trope.create!(name:"Ghost Hitchhiker", description: "A seemingly innocuous hitchhiker has a ghostly background", genre: horror)
@@ -195,7 +195,3 @@ big_bang = Show.create!(title: "The Big Bang Theory", producer: bobby, genre: co
 leftovers = Show.create!(title: "The Leftovers", producer: jimmy, genre: fantasy)
 b99 = Show.create!(title: "Brooklyn 99", producer: bobby, genre: comedy)
 pandr = Show.create!(title: "Parks and Rec", producer: sally, genre: comedy)
-
-
-# pandr.actors << [moss, sommer, coon]
-# b99.actors << []
