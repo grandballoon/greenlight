@@ -150,4 +150,52 @@ jacobson = Actor.create!(name: "Peter Jacobson", a_list: false)
 radner = Actor.create!(name: "Josh Radner", a_list: false)
 sommer = Actor.create!(name: "Rich Sommer", a_list: false)
 
-#ACTRESS
+
+#ACTRESSES
+foy = Actor.create!(name: "Clair Foy", a_list: true)
+basset = Actor.create!(name: "Angela Bassett", a_list: true)
+dowd = Actor.create!(name: "Ann Dowd", a_list: false)
+lively = Actor.create!(name: "Blake Lively", a_list: false)
+lange = Actor.create!(name: "Jessica Lange", a_list: true)
+headey = Actor.create!(name: "Lena Headey", a_list: true)
+williams = Actor.create!(name: "Maisie Williams", a_list: true)
+moss = Actor.create!(name: "Elizabeth Moss", a_list: true)
+brown = Actor.create!(name: "Millie Bobby Brown", a_list: true)
+dyer = Actor.create!(name: "Natalia Dyer", a_list: false)
+coon = Actor.create!(name: "Carrie Coon", a_list: false)
+kidman = Actor.create!(name: "Nicole Kidman", a_list: true)
+adams = Actor.create!(name: "Amy Adams", a_list: true)
+ryder = Actor.create!(name: "Winona Ryder", a_list: true)
+fischer = Actor.create!(name: "Jenna Fischer", a_list: false)
+dreyfus = Actor.create!(name: "Julia Louis-Dreyfus", a_list: true)
+deschanel = Actor.create!(name: "Zooey Deschanel", a_list: true)
+brie = Actor.create!(name: "Alison Brie", a_list: true)
+hargitay = Actor.create!(name: "Mariska Hargitay", a_list: false)
+vergara = Actor.create!(name: "Sofia Vergara", a_list: true)
+
+
+#SHOWS
+good_place = Show.create!(title: "The Good Place", producer: tommy, genre: comedy)
+game_of_thrones = Show.create!(title: "Game of Thrones", producer: barb, genre: fantasy)
+black_mirror = Show.create!(title: "Black Mirror", producer: suzie, genre: horror)
+the_office = Show.create!(title: "The Office", producer: bobby, genre: comedy)
+kardashians = Show.create!(title: "Keeping Up with the Kardashians", producer: sally, genre: reality)
+sharp_objects = Show.create!(title: "Sharp Objects", producer: suzie, genre: drama)
+big_little_lies = Show.create!(title: "Big Little Lies", producer: suzie, genre: drama)
+american_horror_story = Show.create!(title: "American Horror Story", producer: suzie, genre: horror)
+himym = Show.create!(title: "How I Met Your Mother", producer: bobby, genre: comedy)
+glow = Show.create!(title: "Glow", producer: tommy, genre: comedy)
+westworld = Show.create!(title: "Westworld", producer: barb, genre: drama)
+stranger_things = Show.create!(title: "Stranger Things", producer: jimmy, genre: fantasy)
+oitnb = Show.create!(title: "Orange Is the New Black", producer: suzie, genre: drama)
+handmaids_tale = Show.create!(title: "Handmaid's Tale", producer: sally, genre: drama)
+jane_virgin = Show.create!(title: "Jane the Virgin", producer: sally, genre: drama)
+saul = Show.create!(title: "Better Call Saul", producer: jimmy, genre: drama)
+big_bang = Show.create!(title: "The Big Bang Theory", producer: bobby, genre: comedy)
+leftovers = Show.create!(title: "The Leftovers", producer: jimmy, genre: fantasy)
+b99 = Show.create!(title: "Brooklyn 99", producer: bobby, genre: comedy)
+pandr = Show.create!(title: "Parks and Rec", producer: sally, genre: comedy)
+
+
+# pandr.actors << [moss, sommer, coon]
+# b99.actors << []
