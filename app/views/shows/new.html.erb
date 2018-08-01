@@ -3,9 +3,9 @@
 <%= form_for @show do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+
   <%= f.collection_select(:genre_id, Genre.all, :id, :name) %>
+    <%= f.label :description %>
   <p>It's like <%= f.collection_select(:influenced, Show.all, :id, :title) %> meets <%= f.collection_select(:influences, Show.all, :id, :title) %></p>
   <%= f.submit %>
 
