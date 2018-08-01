@@ -5,12 +5,12 @@ Actor.destroy_all
 Show.destroy_all
 
 #PRODUCERS
-tommy = Producer.create!(name: "Tommy Showbiz")
-sally = Producer.create!(name: "Sally Showbiz")
-jimmy = Producer.create!(name: "Jimmy Showbiz")
-bobby = Producer.create!(name: "Bobby Showbiz")
-suzie = Producer.create!(name: "Suzie Showbiz")
-barb = Producer.create!(name: "Barb Showbiz")
+tommy = Producer.create!(name: "Tommy Showbiz", password: "michael")
+sally = Producer.create!(name: "Sally Showbiz", password: "deborah")
+jimmy = Producer.create!(name: "Jimmy Showbiz", password: "bailey")
+bobby = Producer.create!(name: "Bobby Showbiz", password: "superman")
+suzie = Producer.create!(name: "Suzie Showbiz", password: "ohno")
+barb = Producer.create!(name: "Barb Showbiz", password: "butterfly")
 
 
 #GENRES

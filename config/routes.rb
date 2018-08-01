@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :characters
   resources :episodes
   resources :producers, only: [:new, :create, :delete]
+  resources :sessions, only: [:new, :create, :delete]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/welcome", to: "producers#welcome", as: "welcome"
-  get "/signup", to: "producers#signup", as: "signup"
+  get "/profile", to: "producers#show", as: "profile"
 end
