@@ -1,9 +1,28 @@
 <p>All right kid, speak to me. What's this joint about? Gimme the skinny.</p>
 <%= form_for @show do |f| %>
 
-  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) %>
+  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) do |t| %>
+    <div class="row">
+      <%= t.label(class: "check_box") do %>
+          <%= t.check_box(class: "check_box") %>
+          <%= t.object.name %>
+      <% end %>
+    </div>
+  <% end %>
+
    <br><br>
-  <%= f.collection_check_boxes(:actors, Actor.all, :id, :name) %><br>
+
+<p>Now, pick your leads.</p>
+  <%= f.collection_check_boxes(:actors, Actor.all, :id, :name) do |a| %>
+    <div class="row">
+      <%= a.label(class: "check-box") do %>
+        <%= a.check_box(class: "check-box") %>
+        <%= a.object.name %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <br>
   <%= f.submit %>
 
 <% end %>
