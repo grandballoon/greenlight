@@ -1,9 +1,19 @@
-<%= @show.title %>
+<h1>Your show: <%= @show.title %></h1>
 
-<% @show.tropes.each do |trope|%>
-  <%= trope.name %>: <%= trope.description %><br>
-<% end  %>
+<h4>Tropes:</h4>
+<ul>
+  <% @show.tropes.each do |trope|%>
+    <li>
+      <%= trope.name %>: <%= trope.description %><br>
+    </li>
+  <% end  %>
+</ul>
 
-<% @show.actors.each do |actor| %>
-  <%= actor.name %>
-<% end  %>
+<h4>Actors:</h4>
+<ul>
+  <% @show.actors.each do |actor| %>
+    <li>
+      <%= actor.name %>
+    </li>
+  <% end  %>
+</ul>
