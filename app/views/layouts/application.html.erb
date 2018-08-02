@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Greenlight</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,10 +15,19 @@
     <header class="navbar  navbar-inverse">
        <div class="navbar-class">
          <div class="container">
-           <ul class = nav navbar-nav>
-             <% if @producer %>
-               <li><%= link_to "LOGOUT", logout_path, method: :delete, id: session[:logged_in_producer_id]  %></li>
-               <li><%= link_to "PROFILE", producer_path(@producer) %></li>
+           <% if @producer %>
+           <ul class = nav>
+               <li class="nav-item">
+                 <p class = "nav-link">
+                   <%= link_to "LOGOUT", logout_path, method: :delete, id: session[:logged_in_producer_id]  %>
+                 </p>
+               </li>
+               <li class="nav-item">
+               <p class="nav-link"> <%= link_to "PROFILE", profile_path(@producer) %></p>
+               </li>
+               <li class="nav-item">
+               <p class="nav-link"><%= link_to "MAKE A NEW SHOW", new_show_path %></p>
+               </li>
               <% else %>
              <% end %>
            </ul>

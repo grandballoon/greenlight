@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
    if !!@producer && @producer.authenticate(params[:password])
      session[:logged_in_producer_id] = @producer.id
-     flash[:notice] = "Login Successul!"
+     flash[:notice] = "Login Successful!"
      redirect_to profile_path
    else
      flash[:notice] = "Invalid username or password"
