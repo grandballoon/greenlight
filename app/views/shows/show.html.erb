@@ -1,0 +1,9 @@
+<%= @show.title %>
+
+<% @show.tropes.each do |trope|%>
+  <%= trope.name %>: <%= trope.description %><br>
+<% end  %>
+
+<% @show.actors.each do |actor| %>
+  <%= actor.name %>
+<% end  %>

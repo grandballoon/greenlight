@@ -35,11 +35,22 @@ class ShowsController < ApplicationController
 
   def update
     @show = Show.find(params[:id])
+    params[:show][:tropes].each do |trope|
+      if trope != ""
+        ShowTrope.create(trope_id: trope, show_id: @show.id)
+      end
+    end
 
-    if @show.update(show_params)
-      redirect_to #TODO
+    params[:show][:actors].each do |actor|
+      if actor != ""
+        Appearance.create(actor_id: actor, show_id: @show.id)
+      end
+    end
+
+    if @show.save
+      redirect_to @show
     else
-      render #TODO
+      render :edit
     end
   end
 

@@ -1,6 +1,7 @@
   <p>All right kid, speak to me. What's this joint about? Gimme the skinny.</p>
 <%= form_for @show do |f| %>
-  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) %>
-
+  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) %> <br><br>
+  <%= f.collection_check_boxes(:actors, Actor.all, :id, :name) %><br>
+  <%= f.submit %>
 
 <% end %>

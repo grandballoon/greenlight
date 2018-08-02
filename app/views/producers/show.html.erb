@@ -4,7 +4,7 @@
 <p>Kid, you're on fire. You're eating up the slate. Look at all these joints you've got behind you:</p>
 <ul>
   <% @producer.shows.each do |show| %>
-    <li><% show.title %><br></li>
+    <li><%= link_to show.title, show %><br></li>
   <% end  %>
 </ul>
 <% else  %>
