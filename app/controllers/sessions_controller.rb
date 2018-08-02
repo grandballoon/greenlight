@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
  end
 
  def destroy
-   byebug
    session.delete(:logged_in_producer_id)
    flash[:notice] = "Logout successful"
    redirect_to new_session_path

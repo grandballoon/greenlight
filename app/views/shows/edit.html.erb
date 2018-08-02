@@ -1,21 +1,8 @@
   <p>All right kid, speak to me. What's this joint about? Gimme the skinny.</p>
 <%= form_for @show do |f| %>
-<div class="col-md-4">
-  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) do |t| %>
-    <div class="row">
-      <%= t.label(class: "check_box") do %>
-        <div class="col-xs-4">
-          <%= t.check_box(class: "check_box") %>
-        </div>
 
-        <div class="col-xs-8">
-          <%= t.object.name %>
-        </div>
-      <% end %>
-    </div>
-    <% end %>
+  <%= f.collection_check_boxes(:tropes, @show.genre.tropes.all, :id, :name) %>
    <br><br>
-</div>
   <%= f.collection_check_boxes(:actors, Actor.all, :id, :name) %><br>
   <%= f.submit %>
 

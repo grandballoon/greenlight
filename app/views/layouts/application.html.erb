@@ -15,7 +15,7 @@
     <header class="navbar  navbar-inverse">
        <div class="navbar-class">
          <div class="container">
-           <% if @producer %>
+           <% if session[:logged_in_producer_id] %>
            <ul class = nav>
                <li class="nav-item">
                  <p class = "nav-link">
@@ -29,6 +29,11 @@
                <p class="nav-link"><%= link_to "MAKE A NEW SHOW", new_show_path %></p>
                </li>
               <% else %>
+              <ul class=nav>
+                <li class="nav-item">
+                  <p class="nav-link"><%= link_to "SIGN UP", new_producer_path %></p>
+                </li>
+              </ul>
              <% end %>
            </ul>
 
