@@ -16,7 +16,12 @@
        <div class="navbar-class">
          <div class="container">
            <% if session[:logged_in_producer_id] %>
-           <ul class = nav>
+           <ul class="nav">
+               <li class="nav-item">
+                 <a href="#">
+                   <img src="/greenlight-logo.png" alt="logo">
+                 </a>
+               </li>
                <li class="nav-item">
                  <p class = "nav-link">
                    <%= link_to "LOGOUT", logout_path, method: :delete, id: session[:logged_in_producer_id]  %>
@@ -29,7 +34,12 @@
                <p class="nav-link"><%= link_to "MAKE A NEW SHOW", new_show_path %></p>
                </li>
               <% else %>
-              <ul class=nav>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="#">
+                    <img src="/greenlight-logo.png" alt="logo">
+                  </a>
+                </li>
                 <li class="nav-item">
                   <p class="nav-link"><%= link_to "SIGN UP", new_producer_path %></p>
                 </li>
@@ -42,7 +52,7 @@
       </div>
     </header>
 
-    <div style="margin-left:30px;" class="text-monospace">
+    <div style="margin:40px;" class="text-monospace">
 
     <%= yield %>
 
