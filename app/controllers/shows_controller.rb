@@ -10,15 +10,14 @@ class ShowsController < ApplicationController
   end
 
   def create
-    @show = Show.new(title: params[:show][:title], genre_id: params[:show][:genre_id], producer: current_producer)
+    @show = Show.create(title: params[:show][:title], genre_id: params[:show][:genre_id], producer: current_producer)
     @influence_one = Show.find(params[:show][:influenced])
     @influence_two = Show.find(params[:show][:influences])
-    @show.influences << @influence_one
-    if @influence_one != @influence_two
-      @show.influences << @influence_two
-    end
-    byebug
+
+
     if @show.save
+      Relationship.create(influencer_id: @influence_one.id, influenced_id: @show.id)
+      Relationship.create(influencer_id: @influence_two.id, influenced_id: @show.id)
       redirect_to "/shows/#{@show.id}/edit"
     else
       flash[:notice] = "I'm not seeing the whole picture, doll."

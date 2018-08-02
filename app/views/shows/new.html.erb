@@ -1,5 +1,5 @@
 <h1>All right. Stay with me here.</h1>
-
+<%= flash[:notice] %>
 <%= form_for @show do |f| %>
 <p>You're gonna love this one. Millie Bobby Brown's already onboard. It's called: <%= f.text_field :title %></p> <br>
   It's a classic <%= f.collection_select(:genre_id, Genre.all, :id, :name) %> story. <br>
