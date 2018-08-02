@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
  skip_before_action :authorized, only: [:new, :create]
+ helper_method :destroy
 
  def new
    render :new
@@ -20,6 +21,7 @@ class SessionsController < ApplicationController
  end
 
  def destroy
+   byebug
    session.delete(:logged_in_producer_id)
    flash[:notice] = "Logout successful"
    redirect_to new_session_path
