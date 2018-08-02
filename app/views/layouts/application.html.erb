@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <header class="navbar  navbar-inverse">
+    <header class="navbar  navbar-inverse text-monospace">
        <div class="navbar-class">
          <div class="container">
            <% if session[:logged_in_producer_id] %>
@@ -41,6 +41,11 @@
          </div>
       </div>
     </header>
+
+    <div style="margin-left:30px;" class="text-monospace">
+
     <%= yield %>
+
+    </div>
   </body>
 </html>
