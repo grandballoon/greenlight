@@ -1,7 +1,7 @@
-<h1>All right. Stay with me here.</h1>
+<h3>What have you got for me, kid?</h3>
 <%= flash[:notice] %>
 <%= form_for @show do |f| %>
-<p>You're gonna love this one. Millie Bobby Brown's already onboard. It's called: <%= f.text_field :title %></p> <br>
+<p>All right. Stay with me here. You're gonna love this one. Millie Bobby Brown's already onboard. It's called: <%= f.text_field :title %></p> <br>
   It's a classic <%= f.collection_select(:genre_id, Genre.all, :id, :name) %> story. <br>
   <p>It's like <%= f.collection_select(:influenced, Show.all, :id, :title) %> meets <%= f.collection_select(:influences, Show.all, :id, :title) %></p>
   <%= f.submit %>

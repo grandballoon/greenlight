@@ -1,4 +1,7 @@
-<p>All right kid, speak to me. What's this joint about? Gimme the skinny.</p>
+<h3><%= @show.genre.name %>'s hot right now. But what's this joint about? Gimme the skinny.</h3><br><br>
+
+
+<p>It's got all the classic beats. Audiences want timeless stories, and we've got:</p>
 
 <div style="margin:40px;">
 <%= form_for @show do |f| %>
@@ -15,7 +18,9 @@
 
    <br><br>
 
-<p>Now, pick your leads.</p>
+<h3>I love it. I want it. I need it. Who's gonna start in this thing?</h3><br>
+
+<p>That's the best part. Look who's lined up to play ball:</p>
 <div style="margin:40px;">
   <%= f.collection_check_boxes(:actors, Actor.all, :id, :name) do |a| %>
   <div class="row">
@@ -29,6 +34,6 @@
 
 <br>
 
-  <%= f.submit %>
+  <%= f.submit "Greenlight Me, Baby"%>
 
 <% end %>

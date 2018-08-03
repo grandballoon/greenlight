@@ -1,6 +1,6 @@
-<h1>Your show: <%= @show.title %></h1><br>
+<h1>This show's a surefire hit. And the Emmy goes to: <%= @show.title %></h1><br>
 <h3>It's like <%= @show.influences[0].title%> meets <%= @show.influences[1].title%>.</h3><br>
-<h4>Tropes:</h4>
+<h4>It's got all the beats these modern audiences love:</h4>
 <ul>
   <% @show.tropes.each do |trope|%>
     <li>
@@ -9,7 +9,7 @@
   <% end  %>
 </ul>
 
-<h4>Actors:</h4>
+<h4>And look at this lineup! We've got stars for days:</h4>
 <ul>
   <% @show.actors.each do |actor| %>
     <li>
