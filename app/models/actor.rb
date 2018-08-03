@@ -2,7 +2,7 @@ class Actor < ApplicationRecord
   has_many :appearances
   has_many :shows, through: :appearances
   has_many :producers, through: :shows
-  
+
 
 
   def costars
@@ -15,6 +15,17 @@ class Actor < ApplicationRecord
       end
     end
     costars
+  end
+
+# for api use
+  def str_maker
+    split = self.name.split(' ')
+    split.join('+')
+  end
+
+  def pic
+    src = GetActors.new.get_pic(self.str_maker)
+    src["items"][0]["pagemap"]["cse_image"][0]["src"]
   end
 
 
