@@ -1,5 +1,5 @@
-<h1>Your show: <%= @show.title %></h1>
-
+<h1>Your show: <%= @show.title %></h1><br>
+<h3>It's like <%= @show.influences[0].title%> meets <%= @show.influences[1].title%>.</h3><br>
 <h4>Tropes:</h4>
 <ul>
   <% @show.tropes.each do |trope|%>
@@ -13,7 +13,7 @@
 <ul>
   <% @show.actors.each do |actor| %>
     <li>
-      <%= actor.name %>
+      <%= link_to actor.name, actor %>
     </li>
   <% end  %>
 </ul>

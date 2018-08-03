@@ -1,0 +1,5 @@
+<h1><%= @actor.name %></h1><br>
+<h3>Reviews:</h3>
+<% 4.times do %>
+<p>  <img src = "/five-stars.png" alt="stars">"<%= @reviews.sample %>"</p>
+<% end  %>
