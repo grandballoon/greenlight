@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_08_01_200922) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "actors", force: :cascade do |t|
     t.string "name"
     t.boolean "a_list"
